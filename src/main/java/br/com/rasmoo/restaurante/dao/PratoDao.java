@@ -12,8 +12,19 @@ public class PratoDao {
         this.entityManager = entityManager;
     }
 
-    public void cadastrar (Prato prato){
+    public void cadastrar (final Prato prato){
         this.entityManager.persist(prato);
-        System.out.println("Entidade Cadastrada : " + prato);
+    }
+
+    public Prato consultar(final Integer id){
+        return this.entityManager.find(Prato.class, id);
+    }
+
+    public void atualizar(final Prato prato){
+        this.entityManager.merge(prato);
+    }
+
+    public void excluir(final Prato prato){
+        this.entityManager.remove(prato);
     }
 }

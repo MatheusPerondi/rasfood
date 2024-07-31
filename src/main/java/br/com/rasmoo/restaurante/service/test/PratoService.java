@@ -19,11 +19,23 @@ public class PratoService {
         ristoto.setDisponivel(true);
         ristoto.setValor(BigDecimal.valueOf(88.50));
 
+        Prato salmao = new Prato();
+        salmao.setNome("Salmão ao molho de maracuja");
+        salmao.setDescricao("Salmão grelhado ao molho de maracuja");
+        salmao.setDisponivel(true);
+        salmao.setValor(BigDecimal.valueOf(60.00));
+
         EntityManager entityManager = JPAUtil.getEntityManagerRasFood();
         PratoDao pratoDao = new PratoDao(entityManager);
 
         entityManager.getTransaction().begin();
         pratoDao.cadastrar(ristoto);
+        pratoDao.cadastrar(salmao);
+        System.out.println("O prato consultado foi " + pratoDao.consultar(1));
+
+        pratoDao.excluir(salmao);
+        System.out.println(pratoDao.consultar(2));
+
         entityManager.getTransaction().commit();
         entityManager.close();
 
