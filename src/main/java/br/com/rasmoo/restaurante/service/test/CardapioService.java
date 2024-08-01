@@ -50,9 +50,11 @@ public class CardapioService {
 
         caradapioDao.cadastrar(ristoto);
         caradapioDao.cadastrar(salmao);
-        System.out.println("O prato consultado foi " + caradapioDao.consultar(1));
+        //System.out.println("O prato consultado foi " + caradapioDao.consultarPorId(1));
 
-        System.out.println(caradapioDao.consultar(2));
+        //System.out.println(caradapioDao.consultarPorId(2));
+
+        caradapioDao.consultarTodos().forEach(elemento -> System.out.println("O prato consultado foi : " + elemento));
 
         entityManager.getTransaction().commit();
         entityManager.close();
