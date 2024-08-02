@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8f8a841-6e26-4a2b-afa9-eba298d5a74c" name="Changes" comment="Criando carga de dados e query com parametros">
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/dao/CardapioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/dao/CardapioDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/service/test/CardapioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/service/test/CardapioService.java" afterDir="false" />
+    <list default="true" id="e8f8a841-6e26-4a2b-afa9-eba298d5a74c" name="Changes" comment="Criando mais querys personalizadas e tratamento de exceção">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/Ordem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/Cardapio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/Cardapio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722618515507</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Criando mais querys personalizadas e tratamento de exceção">
+      <option name="closed" value="true" />
+      <created>1722619125226</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722619125226</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -138,7 +147,8 @@
     <MESSAGE value="Implementando CRUD e testando" />
     <MESSAGE value="Cirando relacionamento" />
     <MESSAGE value="Criando carga de dados e query com parametros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando carga de dados e query com parametros" />
+    <MESSAGE value="Criando mais querys personalizadas e tratamento de exceção" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando mais querys personalizadas e tratamento de exceção" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
