@@ -21,7 +21,7 @@ public class Ordem {
     @ManyToOne
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "ordem")
+    @OneToMany(mappedBy = "ordem", cascade = CascadeType.ALL)
 //    @JoinTable(
 //            name = "ordens_cardapio",
 //              joinColumns = @JoinColumn(name = "ordens_id"),
@@ -72,6 +72,14 @@ public class Ordem {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public List<OrdensCardapio> getOrdensCardapioList() {
+        return ordensCardapioList;
+    }
+
+    public void setOrdensCardapioList(List<OrdensCardapio> ordensCardapioList) {
+        this.ordensCardapioList = ordensCardapioList;
     }
 
     @Override
