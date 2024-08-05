@@ -20,13 +20,13 @@ public class Ordem {
     @ManyToOne
     private Cliente cliente;
 
-    @ManyToMany
-    @JoinTable(
-            name = "ordens_cardapio",
-            joinColumns = @JoinColumn(name = "ordens_id"),
-            inverseJoinColumns = @JoinColumn(name = "cardapio_id")
-    )
-    private List<Cardapio> cardapioList;
+    @OneToMany
+//    @JoinTable(
+//            name = "ordens_cardapio",
+//              joinColumns = @JoinColumn(name = "ordens_id"),
+//              inverseJoinColumns = @JoinColumn(name = "cardapio_id")
+//      )
+    private List<OrdensCardapio> ordensCardapioList;
 
 
     public Ordem() {
