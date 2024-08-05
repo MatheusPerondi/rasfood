@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8f8a841-6e26-4a2b-afa9-eba298d5a74c" name="Changes" comment="Criando entidades Ordem e Cliente, criando relacionamento ManyToMany entre as entidades e fazendo Join">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/OrdensCardapio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e8f8a841-6e26-4a2b-afa9-eba298d5a74c" name="Changes" comment="Criando entidade OrdensCardapio">
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/Ordem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/Ordem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/OrdensCardapio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/entity/OrdensCardapio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722622232824</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Criando entidade OrdensCardapio">
+      <option name="closed" value="true" />
+      <created>1722833421767</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722833421767</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,7 +165,8 @@
     <MESSAGE value="Criando carga de dados e query com parametros" />
     <MESSAGE value="Criando mais querys personalizadas e tratamento de exceção" />
     <MESSAGE value="Criando entidades Ordem e Cliente, criando relacionamento ManyToMany entre as entidades e fazendo Join" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criando entidades Ordem e Cliente, criando relacionamento ManyToMany entre as entidades e fazendo Join" />
+    <MESSAGE value="Criando entidade OrdensCardapio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando entidade OrdensCardapio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
