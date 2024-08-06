@@ -7,23 +7,39 @@ import javax.persistence.*;
 public class Endereco {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String cep;
+
     private String rua;
+
     private String complemento;
-    private String estado;
+
     private String cidade;
+
+    private String estado;
+
     @ManyToOne(fetch = FetchType.LAZY)
     private Cliente cliente;
 
-    public Endereco(String cep, String rua, String complemento, String estado, String cidade) {
+    public Endereco(String cep, String rua, String complemento, String cidade, String estado) {
         this.cep = cep;
         this.rua = rua;
         this.complemento = complemento;
-        this.estado = estado;
         this.cidade = cidade;
+        this.estado = estado;
     }
 
     public Endereco() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCep() {
@@ -50,20 +66,20 @@ public class Endereco {
         this.complemento = complemento;
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
     public String getCidade() {
         return cidade;
     }
 
     public void setCidade(String cidade) {
         this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public Cliente getCliente() {
@@ -77,12 +93,12 @@ public class Endereco {
     @Override
     public String toString() {
         return "Endereco{" +
-                "cep='" + cep + '\'' +
+                "id=" + id +
+                ", cep='" + cep + '\'' +
                 ", rua='" + rua + '\'' +
                 ", complemento='" + complemento + '\'' +
-                ", estado='" + estado + '\'' +
                 ", cidade='" + cidade + '\'' +
-                ", cliente=" + cliente +
+                ", estado='" + estado + '\'' +
                 '}';
     }
 }

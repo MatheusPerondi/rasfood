@@ -10,10 +10,11 @@ public class Cliente {
 
     @Id
     private String cpf;
+
     private String nome;
+
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
     private List<Endereco> enderecoList = new ArrayList<>();
-
 
     public Cliente(String cpf, String nome) {
         this.cpf = cpf;
@@ -57,6 +58,7 @@ public class Cliente {
         return "Cliente{" +
                 "cpf='" + cpf + '\'' +
                 ", nome='" + nome + '\'' +
+                ", enderecoList=" + enderecoList +
                 '}';
     }
 }

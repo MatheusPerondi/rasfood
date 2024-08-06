@@ -23,24 +23,23 @@ public class OrdemDao {
     }
 
     public List<Ordem> consultarTodos() {
-        String jpql = "SELECT c FROM Ordem c";
+        String jpql = "SELECT o FROM Ordem o";
         return this.entityManager.createQuery(jpql,Ordem.class).getResultList();
     }
 
     public List<ItensPrincipaisVo> consultarItensMaisVendidos(){
         String jpql = "SELECT new br.com.rasmoo.restaurante.vo.ItensPrincipaisVo(" +
-                "c.nome, SUM(oc.quantidade)) " +
-                "FROM Ordem o " +
-                "JOIN o.ordensCardapioList oc " +
+                "c.nome, SUM(oc.quantidade)) FROM Ordem o " +
+                "JOIN OrdensCardapio oc on o.id = oc.cardapio.id " +
                 "JOIN oc.cardapio c " +
                 "GROUP BY c.nome " +
                 "ORDER BY SUM(oc.quantidade) DESC";
-        return this.entityManager.createQuery(jpql, ItensPrincipaisVo.class).getResultList();
+        return this.entityManager.createQuery(jpql,ItensPrincipaisVo.class).getResultList();
     }
 
-    public Ordem joinfetchCliente(final Integer id) {
+    public Ordem joinFetchCliente(final Integer id) {
         String jpql = "SELECT o FROM Ordem o JOIN FETCH o.cliente WHERE o.id = :id";
-        return this.entityManager.createQuery(jpql,Ordem.class).setParameter("id", id).getSingleResult();
+        return this.entityManager.createQuery(jpql,Ordem.class).setParameter("id",id).getSingleResult();
     }
 
     public void atualizar(final Ordem ordem){
@@ -50,6 +49,4 @@ public class OrdemDao {
     public void excluir(final Ordem ordem){
         this.entityManager.remove(ordem);
     }
-
-
 }
