@@ -35,8 +35,10 @@ public class OrdemService {
 
         clienteDao.cadastrar(matheus);
         ordemDao.cadastrar(ordem);
-        System.out.println(ordem.getOrdensCardapioList());
-        System.out.println(ordemDao.consultarItensMaisVendidos());
+
+        Ordem ordem1 = ordemDao.consultarPorId(2);
+        System.out.println(ordem.getValorTotal());
+
         entityManager.getTransaction().commit();
         entityManager.close();
     }

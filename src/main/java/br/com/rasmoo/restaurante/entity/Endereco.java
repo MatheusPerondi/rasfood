@@ -12,7 +12,7 @@ public class Endereco {
     private String complemento;
     private String estado;
     private String cidade;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Cliente cliente;
 
     public Endereco(String cep, String rua, String complemento, String estado, String cidade) {

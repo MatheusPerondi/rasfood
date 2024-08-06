@@ -19,7 +19,7 @@ public class Cardapio {
     private Boolean disponivel;
     private BigDecimal valor;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Categoria categoria;
 
     //@ManyToMany(mappedBy = "cardapioList")

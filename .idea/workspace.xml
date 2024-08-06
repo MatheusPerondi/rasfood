@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8f8a841-6e26-4a2b-afa9-eba298d5a74c" name="Changes" comment="Implementações nas classes Entidade, Endereco, Ordem, OrdemDao, OrdemService e OrdensCardapio">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/vo/ItensPrincipaisVo.java" afterDir="false" />
+    <list default="true" id="e8f8a841-6e26-4a2b-afa9-eba298d5a74c" name="Changes" comment="Aplicando boas praticas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/dao/OrdemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/dao/OrdemDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/service/test/OrdemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rasmoo/restaurante/service/test/OrdemService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722966845329</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Aplicando boas praticas">
+      <option name="closed" value="true" />
+      <created>1722968796040</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722968796040</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -200,10 +206,10 @@
     <MESSAGE value="Criando mais querys personalizadas e tratamento de exceção" />
     <MESSAGE value="Criando entidades Ordem e Cliente, criando relacionamento ManyToMany entre as entidades e fazendo Join" />
     <MESSAGE value="Criando entidade OrdensCardapio" />
-    <MESSAGE value="Aplicando boas praticas" />
     <MESSAGE value="Testando novas entidades" />
     <MESSAGE value="Implementações nas classes Entidade, Endereco, Ordem, OrdemDao, OrdemService e OrdensCardapio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementações nas classes Entidade, Endereco, Ordem, OrdemDao, OrdemService e OrdensCardapio" />
+    <MESSAGE value="Aplicando boas praticas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aplicando boas praticas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
