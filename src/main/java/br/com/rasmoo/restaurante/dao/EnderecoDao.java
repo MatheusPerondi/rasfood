@@ -1,6 +1,7 @@
 package br.com.rasmoo.restaurante.dao;
 
 import br.com.rasmoo.restaurante.entity.Categoria;
+import br.com.rasmoo.restaurante.entity.ClienteId;
 import br.com.rasmoo.restaurante.entity.Endereco;
 import br.com.rasmoo.restaurante.vo.ClienteVo;
 
@@ -35,7 +36,7 @@ public class EnderecoDao {
     }
 
     public List<ClienteVo> consultarClientes(final String estado, final String cidade, final String rua) {
-        String jpql = "SELECT new br.com.rasmoo.restaurante.vo.ClienteVo(e.cliente.cpf, e.cliente.nome) " +
+        String jpql = "SELECT new br.com.rasmoo.restaurante.vo.ClienteVo(e.cliente.clienteId.cpf, e.cliente.nome) " +
                 "FROM Endereco e " +
                 "WHERE 1=1";
         if (Objects.nonNull(estado)) {
@@ -67,7 +68,7 @@ public class EnderecoDao {
         CriteriaQuery<ClienteVo> criteriaQuery = builder.createQuery(ClienteVo.class);
 
         Root<Endereco> root = criteriaQuery.from(Endereco.class);
-        criteriaQuery.multiselect(root.get("cliente").get("cpf"), root.get("cliente").get("nome"));
+        criteriaQuery.multiselect(root.get("cliente").get("clienteId").get("cpf"), root.get("cliente").get("nome"));
 
         Predicate predicate = builder.and();
 
